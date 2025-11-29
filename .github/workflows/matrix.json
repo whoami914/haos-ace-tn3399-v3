@@ -1,7 +1,7 @@
 [
   {
     "id": "tn3399-v3",
-    "defconfig": "tn3399-v3",
+    "defconfig": "tn3399_v3",
     "architecture": "aarch64",
     "label": "board/tn3399-v3"
   }
