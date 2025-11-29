@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 28 * ?'  #  每月28日0时编译，cron表达式，格式为分 时 日 月 周
-  push:
-    branches: ["master"]
+  #push:
+  #  branches: ["master"]
 env:
   GIT_TERMINAL_PROMPT: 0  # 禁用终端提示
   GIT_SUBMODULE_STRATEGY: recursive  # 强制递归初始化子模块
