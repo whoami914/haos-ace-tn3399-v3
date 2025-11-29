@@ -1,5 +1,8 @@
 name: Multi-Target Build
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 28 * ?'  #  cron表达式，格式为分 时 日 月 周
   push:
     branches: ["master"]
 env:
@@ -15,7 +18,7 @@ jobs:
         id: set-matrix
         run: |
           # 定义目标列表
-          TARGETS='["k2b_h618", "rk3399_custom"]'
+          TARGETS='["tn3399_v3"]'
           echo "matrix=$TARGETS" >> $GITHUB_OUTPUT
 
   build:
