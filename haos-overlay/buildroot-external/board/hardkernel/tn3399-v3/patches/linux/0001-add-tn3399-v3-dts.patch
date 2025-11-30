@@ -873,6 +873,6 @@ index 0000000..abcdefg
 +&hdmi_hdcp2 {
 +	status = "okay";
 +};
-
++
 +    
 +};
