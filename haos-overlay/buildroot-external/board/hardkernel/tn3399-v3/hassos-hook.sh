@@ -1,6 +1,6 @@
 #!/bin/bash
 # shellcheck disable=SC2155
-
+chmod +x ${BOARD_DIR}/rkbin/loaderimage
 function hassos_pre_image() {
     local BOOT_DATA="$(path_boot_dir)"
 
