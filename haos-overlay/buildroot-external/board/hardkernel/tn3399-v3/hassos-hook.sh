@@ -1,6 +1,6 @@
 #!/bin/bash
 # shellcheck disable=SC2155
-chmod +x ${BOARD_DIR}/rkbin/loaderimage
+
 function hassos_pre_image() {
     local BOOT_DATA="$(path_boot_dir)"
 
@@ -12,6 +12,7 @@ function hassos_pre_image() {
     cp ${BOARD_DIR}/rkbin/idbloader.img ${BINARIES_DIR}/
     cp ${BOARD_DIR}/rkbin/trust.img ${BINARIES_DIR}/
     mkimage -C none -A arm -T script -d ${BOARD_DIR}/uboot-boot.ush ${BOOT_DATA}/boot.scr  
+    chmod +x ${BOARD_DIR}/rkbin/loaderimage
     ${BOARD_DIR}/rkbin/loaderimage --pack --uboot ${BINARIES_DIR}/u-boot.bin ${BINARIES_DIR}/u-boot.img 0x200000
 }
 
